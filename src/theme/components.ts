@@ -53,22 +53,26 @@ export const components: Components<Theme> = {
           background: `linear-gradient(135deg, ${brand.primaryLight} 0%, ${brand.primaryMain} 100%)`,
         },
       },
-      // contained secondary — Electric Lime
+      // contained secondary — dark mow green
       containedSecondary: {
-        color: brand.dark,
+        color: '#ffffff',
+        background: `linear-gradient(135deg, ${brand.primaryDark} 0%, #0F6630 100%)`,
+        '&:hover': {
+          background: `linear-gradient(135deg, ${brand.primaryMain} 0%, ${brand.primaryDark} 100%)`,
+        },
       },
       // outlined — green border
       outlinedPrimary: {
         borderWidth: 1.5,
         '&:hover': {
-          backgroundColor: `rgba(76,175,80,0.08)`,
+          backgroundColor: `rgba(44,199,107,0.08)`,
           borderWidth: 1.5,
         },
       },
       // text / ghost
       text: {
         '&:hover': {
-          backgroundColor: `rgba(76,175,80,0.06)`,
+          backgroundColor: `rgba(44,199,107,0.06)`,
         },
       },
     },
@@ -95,7 +99,7 @@ export const components: Components<Theme> = {
         borderRadius: 8,
         transition: 'all 0.15s ease',
         '&:hover': {
-          backgroundColor: `rgba(76,175,80,0.08)`,
+          backgroundColor: `rgba(44,199,107,0.08)`,
         },
       },
     },
@@ -110,16 +114,16 @@ export const components: Components<Theme> = {
         fontSize: '0.75rem',
       },
       colorPrimary: {
-        backgroundColor: `rgba(76,175,80,0.14)`,
+        backgroundColor: `rgba(44,199,107,0.14)`,
         color: brand.primaryMain,
         '&.MuiChip-outlined': {
           backgroundColor: 'transparent',
-          borderColor: `rgba(76,175,80,0.45)`,
+          borderColor: `rgba(44,199,107,0.45)`,
         },
       },
       colorSecondary: {
-        backgroundColor: `rgba(172,255,90,0.12)`,
-        color: brand.lime,
+        backgroundColor: `rgba(20,133,63,0.14)`,
+        color: brand.primaryDark,
       },
     },
   },
@@ -282,7 +286,7 @@ export const components: Components<Theme> = {
         '& .MuiSlider-thumb': {
           backgroundColor: brand.primaryMain,
           '&:hover, &.Mui-focusVisible': {
-            boxShadow: `0 0 0 8px rgba(76,175,80,0.16)`,
+            boxShadow: `0 0 0 8px rgba(44,199,107,0.16)`,
           },
         },
       },
@@ -356,12 +360,12 @@ export const components: Components<Theme> = {
         margin: '2px 6px',
         fontSize: '0.9375rem',
         '&:hover': {
-          backgroundColor: `rgba(76,175,80,0.08)`,
+          backgroundColor: `rgba(44,199,107,0.08)`,
         },
         '&.Mui-selected': {
-          backgroundColor: `rgba(76,175,80,0.12)`,
+          backgroundColor: `rgba(44,199,107,0.12)`,
           '&:hover': {
-            backgroundColor: `rgba(76,175,80,0.16)`,
+            backgroundColor: `rgba(44,199,107,0.16)`,
           },
         },
       },
@@ -393,8 +397,8 @@ export const components: Components<Theme> = {
         border: '1px solid',
       },
       standardSuccess: {
-        backgroundColor: `rgba(76,175,80,0.1)`,
-        borderColor: `rgba(76,175,80,0.25)`,
+        backgroundColor: `rgba(44,199,107,0.1)`,
+        borderColor: `rgba(44,199,107,0.25)`,
         color: brand.text,
         '& .MuiAlert-icon': { color: brand.primaryMain },
       },
@@ -425,12 +429,12 @@ export const components: Components<Theme> = {
       root: {
         borderRadius: 8,
         '&:hover': {
-          backgroundColor: `rgba(76,175,80,0.06)`,
+          backgroundColor: `rgba(44,199,107,0.06)`,
         },
         '&.Mui-selected': {
-          backgroundColor: `rgba(76,175,80,0.12)`,
+          backgroundColor: `rgba(44,199,107,0.12)`,
           '&:hover': {
-            backgroundColor: `rgba(76,175,80,0.16)`,
+            backgroundColor: `rgba(44,199,107,0.16)`,
           },
         },
       },
@@ -475,7 +479,7 @@ export const components: Components<Theme> = {
     styleOverrides: {
       root: {
         '&:hover': {
-          backgroundColor: `rgba(76,175,80,0.03)`,
+          backgroundColor: `rgba(44,199,107,0.03)`,
         },
       },
     },

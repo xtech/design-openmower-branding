@@ -21,7 +21,7 @@ export function ChipsSection() {
       <DemoPanel>
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', mb: 3 }}>
           <Chip label="Mowing" color="primary" icon={<StatusDot color={brand.primaryMain} />} />
-          <Chip label="Electric Lime" color="secondary" />
+          <Chip label="Secondary" color="secondary" />
           <Chip label="Error" color="error" />
           <Chip label="Warning" color="warning" />
           <Chip label="Info" color="info" />

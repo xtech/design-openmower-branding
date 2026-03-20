@@ -18,7 +18,7 @@ const primaryColors = [
     name: 'Mow Green',
     hex: '#2CC76B',
     bg: brand.green,
-    use: 'Brand accent — tabs, labels, highlights, decorative dots',
+    use: 'Primary color — buttons, links, focus rings, active states',
   },
   {
     name: 'Electric Lime',
@@ -58,12 +58,6 @@ const neutralScale = [
 const brandGreenScale = [
   '#D4F7E4', '#A8EFC5', '#72DFA2', '#3ECF7C',
   '#2CC76B', '#1EA856', '#14853F', '#0C5E2B', '#063A19',
-]
-
-// MUI Material Green (primary) ramp — Green 100→900
-const primaryGreenScale = [
-  '#C8E6C9', '#A5D6A7', '#81C784', '#66BB6A',
-  '#4CAF50', '#43A047', '#388E3C', '#2E7D32', '#1B5E20',
 ]
 
 // Electric Lime ramp
@@ -148,8 +142,7 @@ export function ColorsSection() {
       </Box>
 
       {/* Colour scales */}
-      <ScaleRow label="Brand green scale — #2CC76B ramp" colors={brandGreenScale} />
-      <ScaleRow label="Primary green scale — Material Green 100→900" colors={primaryGreenScale} />
+      <ScaleRow label="Mow green scale — primary color ramp" colors={brandGreenScale} />
       <ScaleRow label="Electric lime scale — #ACFF5A ramp" colors={limeScale} />
       <ScaleRow
         label="Dark / Neutral scale — graphite with green hint increasing toward dark end"

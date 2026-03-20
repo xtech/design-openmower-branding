@@ -38,23 +38,6 @@ jobs:
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
 
-      # Generate brand guide PDF
-      - name: Start preview server
-        run: npx --yes serve dist -p 4173 &
-
-      - name: Generate brand guide PDF
-        run: node scripts/generate-pdf.mjs
-        env:
-          PORT: 4173
-
-      # Upload PDF as build artifact
-      - name: Upload brand guide PDF
-        uses: actions/upload-artifact@v4
-        with:
-          name: openmower-brand-guide-pdf
-          path: dist/openmower-brand-guide.pdf
-          retention-days: 30
-
       # Upload full dist/ for Pages deployment
       - name: Upload Pages artifact
         if: github.ref == 'refs/heads/main'
