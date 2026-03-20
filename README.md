@@ -32,6 +32,7 @@ Copy the `src/theme/` directory into your project. It contains:
 | `palette.ts` | MUI `PaletteOptions` built from tokens |
 | `typography.ts` | DM Sans type scale |
 | `components.ts` | Per-component style overrides |
+| `augmentation.d.ts` | TypeScript declaration for custom button variants (e.g. `ghost`) |
 | `index.ts` | `openMowerTheme` export + re-exported `brand` tokens |
 
 Optionally copy `src/components/` for the logo components.
@@ -59,9 +60,9 @@ export default function App() {
 import { OpenMowerLogo } from './components/OpenMowerLogo'
 import { OpenMowerIcon } from './components/OpenMowerIcon'
 
-// Full wordmark — scales to container width
-<OpenMowerLogo color="white" />          // on dark bg
-<OpenMowerLogo color="#111412" />        // on light / green bg
+// Full wordmark — pass style to control size
+<OpenMowerLogo style={{ height: 22, width: 'auto' }} />   // white on dark bg (default)
+<OpenMowerLogo color="#0E100E" />                          // dark on light / green bg
 
 // Square icon mark — for nav, app icons, favicons
 <OpenMowerIcon size={32} color="white" />
@@ -83,7 +84,7 @@ import tokens from './theme/tokens.json'
 
 ## AI integration
 
-The file `public/openmower-ai-tokens.json` (also downloadable from the live demo) contains the complete design system in a structured format designed for AI consumption. It includes:
+The file `public/openmower-ai-tokens.json` contains the complete design system in a structured format designed for AI consumption. It includes:
 
 - All color tokens with hex values and usage notes
 - Typography scale with sizes, weights, and letter-spacing
@@ -111,8 +112,6 @@ npm run dev
 # → http://localhost:5173
 ```
 
-> **Docker (no local Node):** The dev server can run in Docker — see `.claude/launch.json`.
-
 ---
 
 ## Generating assets
@@ -121,13 +120,10 @@ npm run dev
 # Generate AI token files (public/openmower-ai-tokens.json etc.)
 npm run generate:tokens
 
-# Generate brand guide PDF (requires a built app + running preview server)
+# Build the demo app
 npm run build
-npm run preview &
-npm run generate:pdf
-# → dist/openmower-brand-guide.pdf
 
-# All at once
+# Generate tokens + build in one step
 npm run generate
 ```
 
@@ -139,10 +135,7 @@ Push to `main` to trigger the CI workflow (`.github/workflows/ci.yml`):
 
 1. **Token generation** — rebuilds `openmower-ai-tokens.json` and `openmower-theme-factory.json`
 2. **Vite build** — bundles the demo app with the correct GH Pages base path
-3. **PDF generation** — headless Chrome renders the demo and exports a PDF
-4. **GitHub Pages deploy** — demo is published to `https://<org>.github.io/<repo>/`
-
-The PDF is also uploaded as a build artifact and retained for 30 days.
+3. **GitHub Pages deploy** — demo is published to `https://<org>.github.io/<repo>/`
 
 **First-time setup:** Enable GitHub Pages in your repo settings → *Pages* → Source: **GitHub Actions**.
 
@@ -152,11 +145,13 @@ The PDF is also uploaded as a build artifact and retained for 30 days.
 
 | Token | Value | Usage |
 |-------|-------|-------|
-| Primary | `#4CAF50` → `#388E3C` | Buttons, links, focus rings |
-| Accent | `#2CC76B` | Tab indicators, labels, highlights |
-| Lime | `#ACFF5A` | Code, callouts, secondary chips |
-| Background | `#111412` | App shell |
+| Primary | `#2CC76B` → `#1EA856` | Buttons, links, focus rings, active states |
+| Secondary | `#14853F` | Secondary actions, graphite-style buttons |
+| Amber accent | `#F5A523` | Code, charging status, callouts |
+| Background | `#0E100E` | App shell |
 | Surface | `#181C19` / `#1F2420` / `#262C28` | Cards, panels, elevated surfaces |
+| Error | `#FF6040` | Destructive actions, error states |
+| Warning | `#FCC762` | Caution, low battery, interrupted |
 | Text | `#EBEBEB` / `#8A9490` / `#5C6762` | Primary / secondary / disabled |
 | Font | DM Sans + DM Mono | All UI text + code |
 | Radius | 12px | Base border radius |
