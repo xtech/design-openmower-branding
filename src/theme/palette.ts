@@ -2,19 +2,25 @@ import type { PaletteOptions } from '@mui/material/styles'
 
 /** Raw brand color tokens */
 export const brand = {
+  // OpenMower brand green (identity / accent use)
   green: '#2CC76B',
   greenDeep: '#1EA856',
   greenLight: '#3DD97E',
   greenPale: '#E3F9EC',
   lime: '#ACFF5A',
 
-  dark: '#0C1D13',
-  surface: '#111E18',
-  surface2: '#182A20',
-  surface3: '#1E3328',
+  // MUI Material Green — used as primary (softer, better contrast with white text)
+  primaryMain: '#4CAF50',   // Green 500
+  primaryLight: '#81C784',  // Green 300
+  primaryDark: '#388E3C',   // Green 700
 
-  border: '#243D2E',
-  border2: '#2F4F3C',
+  dark: '#181818',
+  surface: '#212121',
+  surface2: '#282828',
+  surface3: '#2E2E2E',
+
+  border: '#383838',
+  border2: '#454545',
 
   text: '#EEF9F2',
   text2: '#79B890',
@@ -31,10 +37,10 @@ export const palette: PaletteOptions = {
   mode: 'dark',
 
   primary: {
-    main: brand.green,
-    dark: brand.greenDeep,
-    light: brand.greenLight,
-    contrastText: brand.dark,
+    main: brand.primaryMain,
+    dark: brand.primaryDark,
+    light: brand.primaryLight,
+    contrastText: '#ffffff',
   },
 
   secondary: {
