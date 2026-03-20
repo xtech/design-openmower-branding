@@ -41,8 +41,8 @@ export function ChipsSection() {
             { label: 'Active', bg: 'rgba(44,199,107,0.14)', color: brand.primaryMain },
             { label: 'Charging', bg: 'rgba(245,165,35,0.12)', color: brand.amber },
             { label: 'GPS Lock', bg: 'rgba(122,184,255,0.1)', color: brand.info },
-            { label: 'Warning', bg: 'rgba(255,184,90,0.1)', color: brand.warning },
-            { label: 'Error', bg: 'rgba(255,112,112,0.1)', color: brand.error },
+            { label: 'Warning', bg: 'rgba(252,199,98,0.1)', color: brand.warning },
+            { label: 'Error', bg: 'rgba(255,96,64,0.1)', color: brand.error },
             { label: 'Idle', bg: 'rgba(150,180,160,0.08)', color: brand.text3 },
           ].map(({ label, bg, color }) => (
             <Box

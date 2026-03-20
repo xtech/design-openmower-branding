@@ -19,7 +19,7 @@ const sessions = [
 
 const statusConfig: Record<string, { label: string; bg: string; color: string }> = {
   complete: { label: 'Complete', bg: 'rgba(44,199,107,0.14)', color: brand.green },
-  interrupted: { label: 'Interrupted', bg: 'rgba(255,184,90,0.1)', color: '#FFB85A' },
+  interrupted: { label: 'Interrupted', bg: 'rgba(252,199,98,0.1)', color: '#FCC762' },
   scheduled: { label: 'Scheduled', bg: 'rgba(122,184,255,0.1)', color: '#7AB8FF' },
 }
 

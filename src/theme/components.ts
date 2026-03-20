@@ -426,14 +426,14 @@ export const components: Components<Theme> = {
         '& .MuiAlert-icon': { color: brand.primaryMain },
       },
       standardError: {
-        backgroundColor: `rgba(255,112,112,0.08)`,
-        borderColor: `rgba(255,112,112,0.2)`,
+        backgroundColor: `rgba(255,96,64,0.08)`,
+        borderColor: `rgba(255,96,64,0.2)`,
         color: brand.text,
         '& .MuiAlert-icon': { color: brand.error },
       },
       standardWarning: {
-        backgroundColor: `rgba(255,184,90,0.08)`,
-        borderColor: `rgba(255,184,90,0.2)`,
+        backgroundColor: `rgba(252,199,98,0.08)`,
+        borderColor: `rgba(252,199,98,0.2)`,
         color: brand.text,
         '& .MuiAlert-icon': { color: brand.warning },
       },

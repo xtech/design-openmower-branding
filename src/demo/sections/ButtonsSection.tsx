@@ -13,7 +13,7 @@ import { DemoPanel } from '../components/DemoPanel'
 export function ButtonsSection() {
   return (
     <Box>
-      <SectionHeader label="02 — Components" title="Buttons" />
+      <SectionHeader label="03 — Components" title="Buttons" />
 
       <DemoPanel>
         <Typography variant="overline" color="text.disabled" sx={{ display: 'block', mb: 2 }}>
@@ -61,10 +61,10 @@ export function ButtonsSection() {
           </Button>
           <Button
             sx={{
-              bgcolor: 'rgba(255,112,112,0.1)',
+              bgcolor: 'rgba(255,96,64,0.1)',
               color: 'error.main',
-              border: '1px solid rgba(255,112,112,0.2)',
-              '&:hover': { bgcolor: 'rgba(255,112,112,0.15)' },
+              border: '1px solid rgba(255,96,64,0.2)',
+              '&:hover': { bgcolor: 'rgba(255,96,64,0.15)' },
             }}
             startIcon={<StopIcon />}
           >

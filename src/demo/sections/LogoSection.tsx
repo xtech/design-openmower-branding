@@ -47,7 +47,7 @@ function LogoCard({
 export function LogoSection() {
   return (
     <Box>
-      <SectionHeader label="01 — Brand" title="Logo Usage" />
+      <SectionHeader label="02 — Brand" title="Logo Usage" />
 
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2.5, mb: 4 }}>
         <LogoCard bg={brand.dark} border={brand.border} label="On deep forest">

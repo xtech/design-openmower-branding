@@ -5,7 +5,7 @@ import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import GitHubIcon from '@mui/icons-material/GitHub'
-import { OpenMowerIcon } from '../components/OpenMowerIcon'
+import { OpenMowerLogo } from '../components/OpenMowerLogo'
 import { brand } from '../theme'
 
 import { HeroSection } from './sections/HeroSection'
@@ -37,28 +37,16 @@ export function DemoPage() {
       {/* Top nav */}
       <AppBar position="sticky">
         <Toolbar>
-          <Box
-            sx={{
-              width: 32,
-              height: 32,
-              borderRadius: '8px',
-              bgcolor: brand.green,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              mr: 1.5,
-            }}
-          >
-            <OpenMowerIcon color={brand.dark} size={20} />
+          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+            <OpenMowerLogo style={{ height: 22, width: 'auto' }} />
           </Box>
-          <Box sx={{ flexGrow: 1, fontWeight: 600, fontSize: '0.9375rem' }}>OpenMower</Box>
           <IconButton
             component="a"
             href="https://github.com/ClemensElflein/OpenMower"
             target="_blank"
             rel="noopener noreferrer"
             size="small"
-            sx={{ color: 'primary.main' }}
+            sx={{ color: 'white' }}
           >
             <GitHubIcon fontSize="small" />
           </IconButton>

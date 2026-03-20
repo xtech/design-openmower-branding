@@ -43,7 +43,7 @@ export function TypographySection() {
               16px / 400 / 1.7
             </Typography>
           </Box>
-          <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 520 }}>
+          <Typography variant="body1" color="text.primary" sx={{ maxWidth: 520 }}>
             OpenMower is a community project building open-source software and hardware for RTK GPS
             robotic lawn mowers. Precision navigation meets maker culture.
           </Typography>
@@ -61,7 +61,8 @@ export function TypographySection() {
           </Box>
           <Typography
             component="code"
-            sx={{ fontFamily: '"DM Mono", monospace', fontSize: '0.875rem', color: brand.amber }}
+            color="text.primary"
+            sx={{ fontFamily: '"DM Mono", monospace', fontSize: '0.875rem' }}
           >
             {'const position = await gps.getFixedPosition()'}
           </Typography>
