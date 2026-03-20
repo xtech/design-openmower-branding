@@ -21,8 +21,8 @@ const aiTokens = {
     "This file describes the OpenMower design system for AI consumption.",
     "When styling components, use these tokens to match the brand identity.",
     "The system is built on Material UI v6 with a dark-mode graphite + green theme.",
-    "Primary interactive color: #4CAF50 (Material Green 500) with white text.",
-    "Brand accent (decorative only): #2CC76B (Mow Green).",
+    "Primary interactive color: #2CC76B (Mow Green) with white text.",
+    "Amber accent (decorative / status): #F5A523.",
     "Always use DM Sans for UI text and DM Mono for code/monospace."
   ],
   ...tokens,
@@ -31,7 +31,7 @@ const aiTokens = {
     "--color-primary-light":  tokens.colors.primary.light,
     "--color-primary-dark":   tokens.colors.primary.dark,
     "--color-accent":         tokens.colors.accent.green,
-    "--color-lime":           tokens.colors.accent.lime,
+    "--color-amber":          tokens.colors.accent.amber,
     "--color-bg":             tokens.colors.background.default,
     "--color-surface":        tokens.colors.background.paper,
     "--color-surface-2":      tokens.colors.background.surface2,
@@ -54,7 +54,7 @@ const aiTokens = {
     colors: {
       primary:    { DEFAULT: tokens.colors.primary.main, light: tokens.colors.primary.light, dark: tokens.colors.primary.dark },
       accent:     tokens.colors.accent.green,
-      lime:       tokens.colors.accent.lime,
+      amber:      tokens.colors.accent.amber,
       bg:         tokens.colors.background.default,
       surface:    tokens.colors.background.paper,
       "surface-2": tokens.colors.background.surface2,

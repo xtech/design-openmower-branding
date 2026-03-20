@@ -1,0 +1,295 @@
+{
+  "_instructions": [
+    "This file describes the OpenMower design system for AI consumption.",
+    "When styling components, use these tokens to match the brand identity.",
+    "The system is built on Material UI v6 with a dark-mode graphite + green theme.",
+    "Primary interactive color: #2CC76B (Mow Green) with white text.",
+    "Amber accent (decorative / status): #F5A523.",
+    "Always use DM Sans for UI text and DM Mono for code/monospace."
+  ],
+  "name": "OpenMower",
+  "description": "Dark-mode design system for the OpenMower open-source RTK GPS robotic lawn mower project.",
+  "version": "1.0.0",
+  "mode": "dark",
+  "colors": {
+    "accent": {
+      "green": "#2CC76B",
+      "greenDeep": "#1EA856",
+      "greenLight": "#3DD97E",
+      "greenPale": "#E3F9EC",
+      "amber": "#F5A523",
+      "usage": "Brand accent — tab indicators, section labels, decorative highlights"
+    },
+    "primary": {
+      "main": "#2CC76B",
+      "light": "#5FD494",
+      "dark": "#1EA856",
+      "contrastText": "#ffffff",
+      "usage": "Interactive primary — buttons, links, focus rings, active states"
+    },
+    "secondary": {
+      "main": "#14853F",
+      "contrastText": "#ffffff",
+      "usage": "Secondary actions — darker mow green, visually subordinate to primary"
+    },
+    "background": {
+      "default": "#0E100E",
+      "paper": "#181C19",
+      "surface2": "#1F2420",
+      "surface3": "#262C28",
+      "usage": "Layered dark surfaces — default → paper → card → elevated card"
+    },
+    "border": {
+      "subtle": "#343C39",
+      "default": "#424A47",
+      "usage": "Dividers, card borders, input outlines"
+    },
+    "text": {
+      "primary": "#EBEBEB",
+      "secondary": "#8A9490",
+      "disabled": "#5C6762",
+      "usage": "Neutral grey hierarchy — primary for headings, secondary for body, disabled for metadata"
+    },
+    "semantic": {
+      "error": "#FF6040",
+      "warning": "#FCC762",
+      "info": "#7AB8FF",
+      "success": "#2CC76B"
+    }
+  },
+  "typography": {
+    "fontFamily": "DM Sans",
+    "monoFamily": "DM Mono",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap",
+    "weights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "scale": {
+      "display": {
+        "size": "60px",
+        "weight": 700,
+        "letterSpacing": "-0.03em",
+        "lineHeight": 1
+      },
+      "h1": {
+        "size": "42px",
+        "weight": 600,
+        "letterSpacing": "-0.02em",
+        "lineHeight": 1.1
+      },
+      "h2": {
+        "size": "30px",
+        "weight": 600,
+        "letterSpacing": "-0.01em",
+        "lineHeight": 1.2
+      },
+      "h3": {
+        "size": "22px",
+        "weight": 600,
+        "letterSpacing": "0",
+        "lineHeight": 1.3
+      },
+      "h4": {
+        "size": "18px",
+        "weight": 600,
+        "letterSpacing": "0",
+        "lineHeight": 1.4
+      },
+      "h5": {
+        "size": "16px",
+        "weight": 600,
+        "letterSpacing": "0",
+        "lineHeight": 1.5
+      },
+      "h6": {
+        "size": "14px",
+        "weight": 600,
+        "letterSpacing": "0",
+        "lineHeight": 1.5
+      },
+      "body1": {
+        "size": "16px",
+        "weight": 400,
+        "letterSpacing": "0",
+        "lineHeight": 1.7
+      },
+      "body2": {
+        "size": "14px",
+        "weight": 400,
+        "letterSpacing": "0",
+        "lineHeight": 1.6
+      },
+      "caption": {
+        "size": "11px",
+        "weight": 500,
+        "letterSpacing": "0.08em",
+        "lineHeight": 1.5
+      },
+      "overline": {
+        "size": "11px",
+        "weight": 600,
+        "letterSpacing": "0.14em",
+        "lineHeight": 2,
+        "transform": "uppercase"
+      },
+      "button": {
+        "size": "15px",
+        "weight": 500,
+        "letterSpacing": "0.01em",
+        "transform": "none"
+      },
+      "code": {
+        "family": "DM Mono",
+        "size": "14px",
+        "color": "#F5A523"
+      }
+    }
+  },
+  "shape": {
+    "borderRadius": 12,
+    "borderRadiusSm": 6,
+    "borderRadiusMd": 8,
+    "borderRadiusLg": 16
+  },
+  "spacing": {
+    "unit": 8,
+    "note": "All spacing is a multiple of 8px — xs=4, sm=8, md=16, lg=24, xl=32, xxl=48"
+  },
+  "components": {
+    "button": {
+      "contained": "Green 500→700 gradient (135°), white text, no shadow, border-radius 8px",
+      "outlined": "1.5px green border, transparent bg, green text",
+      "text": "No border, green text, subtle green hover tint",
+      "ghost": "Surface3 background, default text, border2 border → green border on hover",
+      "danger": "rgba(255,70,70,0.10) bg, #FF6040 text, rgba(255,70,70,0.20) border",
+      "sizes": {
+        "small": "7px 15px / 13px",
+        "medium": "10px 22px / 15px",
+        "large": "14px 30px / 17px"
+      }
+    },
+    "chip": {
+      "primary": "rgba(76,175,80,0.14) bg, #4CAF50 text, border-radius 20px",
+      "secondary": "rgba(245,165,35,0.12) bg, #F5A523 text"
+    },
+    "card": {
+      "background": "surface2 (#1F2420)",
+      "border": "1px solid border (#343C39)",
+      "borderRadius": "12px",
+      "padding": "20px 22px"
+    },
+    "input": {
+      "background": "surface2",
+      "border": "border2 (#424A47) → primary on focus",
+      "borderRadius": "8px"
+    },
+    "alert": {
+      "borderRadius": "10px",
+      "border": "1px solid semantic color at 25% opacity",
+      "background": "semantic color at 8-10% opacity"
+    }
+  },
+  "themeFactory": {
+    "_note": "Use this section with the anthropic-skills:theme-factory skill",
+    "name": "OpenMower Dark",
+    "mode": "dark",
+    "primaryColor": "#2CC76B",
+    "primaryColorLight": "#5FD494",
+    "primaryColorDark": "#1EA856",
+    "accentColor": "#2CC76B",
+    "secondaryColor": "#F5A523",
+    "backgroundColor": "#0E100E",
+    "surfaceColor": "#181C19",
+    "textColor": "#EBEBEB",
+    "textSecondaryColor": "#8A9490",
+    "errorColor": "#FF6040",
+    "warningColor": "#FCC762",
+    "infoColor": "#7AB8FF",
+    "successColor": "#4CAF50",
+    "headingFont": "DM Sans",
+    "bodyFont": "DM Sans",
+    "monoFont": "DM Mono",
+    "borderRadius": "12px",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+  },
+  "cssVariables": {
+    "--color-primary": "#2CC76B",
+    "--color-primary-light": "#5FD494",
+    "--color-primary-dark": "#1EA856",
+    "--color-accent": "#2CC76B",
+    "--color-amber": "#F5A523",
+    "--color-bg": "#0E100E",
+    "--color-surface": "#181C19",
+    "--color-surface-2": "#1F2420",
+    "--color-surface-3": "#262C28",
+    "--color-border": "#343C39",
+    "--color-border-2": "#424A47",
+    "--color-text": "#EBEBEB",
+    "--color-text-secondary": "#8A9490",
+    "--color-text-disabled": "#5C6762",
+    "--color-error": "#FF6040",
+    "--color-warning": "#FCC762",
+    "--color-info": "#7AB8FF",
+    "--color-success": "#2CC76B",
+    "--font-sans": "\"DM Sans\", sans-serif",
+    "--font-mono": "\"DM Mono\", monospace",
+    "--radius": "12px"
+  },
+  "tailwindConfig": {
+    "_note": "Paste into tailwind.config.js → theme.extend",
+    "colors": {
+      "primary": {
+        "DEFAULT": "#2CC76B",
+        "light": "#5FD494",
+        "dark": "#1EA856"
+      },
+      "accent": "#2CC76B",
+      "amber": "#F5A523",
+      "bg": "#0E100E",
+      "surface": "#181C19",
+      "surface-2": "#1F2420",
+      "surface-3": "#262C28",
+      "border": "#343C39",
+      "border-2": "#424A47",
+      "error": "#FF6040",
+      "warning": "#FCC762",
+      "info": "#7AB8FF",
+      "success": "#2CC76B"
+    },
+    "fontFamily": {
+      "sans": [
+        "\"DM Sans\"",
+        "sans-serif"
+      ],
+      "mono": [
+        "\"DM Mono\"",
+        "monospace"
+      ]
+    },
+    "borderRadius": {
+      "brand": "12px"
+    }
+  },
+  "muiUsage": {
+    "_note": "Minimal snippet to apply this theme in a React + MUI project",
+    "install": "npm install @mui/material @emotion/react @emotion/styled",
+    "snippet": [
+      "import { ThemeProvider } from '@mui/material/styles'",
+      "import CssBaseline from '@mui/material/CssBaseline'",
+      "import { openMowerTheme } from './theme'  // copy src/theme/ into your project",
+      "",
+      "export default function App() {",
+      "  return (",
+      "    <ThemeProvider theme={openMowerTheme}>",
+      "      <CssBaseline />",
+      "      {/* your app */}",
+      "    </ThemeProvider>",
+      "  )",
+      "}"
+    ]
+  }
+}

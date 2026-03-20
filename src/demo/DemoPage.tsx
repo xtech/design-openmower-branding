@@ -18,6 +18,7 @@ import { CardsSection } from './sections/CardsSection'
 import { FormSection } from './sections/FormSection'
 import { AlertsSection } from './sections/AlertsSection'
 import { TableSection } from './sections/TableSection'
+import { DownloadSection } from './sections/DownloadSection'
 
 const sections = [
   <ColorsSection key="colors" />,
@@ -29,6 +30,7 @@ const sections = [
   <FormSection key="form" />,
   <AlertsSection key="alerts" />,
   <TableSection key="table" />,
+  <DownloadSection key="downloads" />,
 ]
 
 export function DemoPage() {
