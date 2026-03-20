@@ -10,9 +10,9 @@ export const brand = {
   greenDeep:  c.accent.greenDeep,
   greenLight: c.accent.greenLight,
   greenPale:  c.accent.greenPale,
-  lime:       c.accent.lime,
+  amber:      c.accent.amber,
 
-  // MUI Material Green — used as interactive primary
+  // Mow Green — used as interactive primary
   primaryMain:  c.primary.main,
   primaryLight: c.primary.light,
   primaryDark:  c.primary.dark,
@@ -49,8 +49,8 @@ export const palette: PaletteOptions = {
   },
 
   secondary: {
-    main:         brand.lime,
-    contrastText: brand.dark,
+    main:         c.secondary.main,
+    contrastText: c.secondary.contrastText,
   },
 
   error:   { main: brand.error,   contrastText: brand.text },

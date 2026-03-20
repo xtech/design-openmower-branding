@@ -61,7 +61,7 @@ export function TypographySection() {
           </Box>
           <Typography
             component="code"
-            sx={{ fontFamily: '"DM Mono", monospace', fontSize: '0.875rem', color: brand.lime }}
+            sx={{ fontFamily: '"DM Mono", monospace', fontSize: '0.875rem', color: brand.amber }}
           >
             {'const position = await gps.getFixedPosition()'}
           </Typography>

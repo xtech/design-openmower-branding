@@ -21,10 +21,10 @@ const primaryColors = [
     use: 'Primary color — buttons, links, focus rings, active states',
   },
   {
-    name: 'Electric Lime',
-    hex: '#ACFF5A',
-    bg: brand.lime,
-    use: 'Accent color — code, special callouts, notifications',
+    name: 'Amber',
+    hex: '#F5A523',
+    bg: brand.amber,
+    use: 'Accent color — code, charging status, callouts',
   },
   {
     name: 'Graphite',
@@ -60,10 +60,10 @@ const brandGreenScale = [
   '#2CC76B', '#1EA856', '#14853F', '#0C5E2B', '#063A19',
 ]
 
-// Electric Lime ramp
-const limeScale = [
-  '#F4FFD6', '#E8FF99', '#CCFF57', '#ACFF5A',
-  '#8AE030', '#6ABF18', '#4E9A08', '#357502', '#1E5000',
+// Amber ramp
+const amberScale = [
+  '#FEF4E0', '#FDE3A8', '#FCC762', '#F5A523',
+  '#E08B0D', '#BC7209', '#935907', '#6B4005', '#402500',
 ]
 
 // Semantic colours
@@ -143,7 +143,7 @@ export function ColorsSection() {
 
       {/* Colour scales */}
       <ScaleRow label="Mow green scale — primary color ramp" colors={brandGreenScale} />
-      <ScaleRow label="Electric lime scale — #ACFF5A ramp" colors={limeScale} />
+      <ScaleRow label="Amber scale — #F5A523 ramp" colors={amberScale} />
       <ScaleRow
         label="Dark / Neutral scale — graphite with green hint increasing toward dark end"
         colors={neutralScale}

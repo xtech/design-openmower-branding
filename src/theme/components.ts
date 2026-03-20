@@ -53,12 +53,30 @@ export const components: Components<Theme> = {
           background: `linear-gradient(135deg, ${brand.primaryLight} 0%, ${brand.primaryMain} 100%)`,
         },
       },
-      // contained secondary — dark mow green
+      // contained secondary — graphite
       containedSecondary: {
-        color: '#ffffff',
-        background: `linear-gradient(135deg, ${brand.primaryDark} 0%, #0F6630 100%)`,
+        color: brand.text,
+        backgroundColor: brand.surface3,
+        border: `1px solid ${brand.border2}`,
         '&:hover': {
-          background: `linear-gradient(135deg, ${brand.primaryMain} 0%, ${brand.primaryDark} 100%)`,
+          backgroundColor: brand.surface2,
+          borderColor: brand.text3,
+        },
+      },
+      // outlined secondary — graphite border
+      outlinedSecondary: {
+        borderColor: brand.border2,
+        color: brand.text2,
+        '&:hover': {
+          backgroundColor: `rgba(235,235,235,0.04)`,
+          borderColor: brand.text3,
+        },
+      },
+      // text secondary — muted
+      textSecondary: {
+        color: brand.text2,
+        '&:hover': {
+          backgroundColor: `rgba(235,235,235,0.04)`,
         },
       },
       // outlined — green border
@@ -122,8 +140,13 @@ export const components: Components<Theme> = {
         },
       },
       colorSecondary: {
-        backgroundColor: `rgba(20,133,63,0.14)`,
-        color: brand.primaryDark,
+        backgroundColor: brand.surface3,
+        color: brand.text2,
+        border: `1px solid ${brand.border}`,
+        '&.MuiChip-outlined': {
+          backgroundColor: 'transparent',
+          borderColor: brand.border2,
+        },
       },
     },
   },

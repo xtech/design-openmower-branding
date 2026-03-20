@@ -30,6 +30,7 @@ export function ChipsSection() {
 
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', mb: 3 }}>
           <Chip label="Outlined Primary" color="primary" variant="outlined" />
+          <Chip label="Outlined Secondary" color="secondary" variant="outlined" />
           <Chip label="Outlined Default" variant="outlined" />
           <Chip label="Outlined Error" color="error" variant="outlined" />
         </Box>
@@ -37,8 +38,8 @@ export function ChipsSection() {
         {/* Custom semantic badges matching brand guide */}
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
           {[
-            { label: 'Active', bg: 'rgba(76,175,80,0.14)', color: brand.primaryMain },
-            { label: 'Charging', bg: 'rgba(172,255,90,0.12)', color: brand.lime },
+            { label: 'Active', bg: 'rgba(44,199,107,0.14)', color: brand.primaryMain },
+            { label: 'Charging', bg: 'rgba(245,165,35,0.12)', color: brand.amber },
             { label: 'GPS Lock', bg: 'rgba(122,184,255,0.1)', color: brand.info },
             { label: 'Warning', bg: 'rgba(255,184,90,0.1)', color: brand.warning },
             { label: 'Error', bg: 'rgba(255,112,112,0.1)', color: brand.error },

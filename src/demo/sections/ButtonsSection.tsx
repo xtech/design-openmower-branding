@@ -37,6 +37,7 @@ export function ButtonsSection() {
           <Button variant="outlined" size="medium">Medium</Button>
           <Button variant="outlined" size="large">Large</Button>
           <Button variant="outlined" startIcon={<SettingsIcon />}>Configure</Button>
+          <Button variant="outlined" color="secondary">Secondary</Button>
         </Box>
 
         <Divider sx={{ mb: 3 }} />
@@ -46,6 +47,7 @@ export function ButtonsSection() {
         </Typography>
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', alignItems: 'center', mb: 4 }}>
           <Button variant="text">Text Button</Button>
+          <Button variant="text" color="secondary">Secondary</Button>
           <Button
             sx={{
               bgcolor: 'background.paper',
