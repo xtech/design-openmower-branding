@@ -14,17 +14,19 @@ export const brand = {
   primaryLight: '#81C784',  // Green 300
   primaryDark: '#388E3C',   // Green 700
 
-  dark: '#181818',
-  surface: '#212121',
-  surface2: '#282828',
-  surface3: '#2E2E2E',
+  // Dark surfaces — graphite with a subtle green hint
+  dark: '#111412',
+  surface: '#181C19',
+  surface2: '#1F2420',
+  surface3: '#262C28',
 
-  border: '#383838',
-  border2: '#454545',
+  border: '#343C39',
+  border2: '#424A47',
 
-  text: '#EEF9F2',
-  text2: '#79B890',
-  text3: '#4C7060',
+  // Text — neutral grey, green toned way down vs original brand
+  text: '#EBEBEB',
+  text2: '#8A9490',
+  text3: '#5C6762',
 
   // Semantic extras
   error: '#FF7070',
