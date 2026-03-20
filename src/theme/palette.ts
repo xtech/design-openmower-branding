@@ -1,83 +1,75 @@
 import type { PaletteOptions } from '@mui/material/styles'
+import tokens from './tokens.json'
 
-/** Raw brand color tokens */
+const c = tokens.colors
+
+/** Raw brand color tokens — source of truth is tokens.json */
 export const brand = {
-  // OpenMower brand green (identity / accent use)
-  green: '#2CC76B',
-  greenDeep: '#1EA856',
-  greenLight: '#3DD97E',
-  greenPale: '#E3F9EC',
-  lime: '#ACFF5A',
+  // Accent greens (identity / decorative use)
+  green:      c.accent.green,
+  greenDeep:  c.accent.greenDeep,
+  greenLight: c.accent.greenLight,
+  greenPale:  c.accent.greenPale,
+  lime:       c.accent.lime,
 
-  // MUI Material Green — used as primary (softer, better contrast with white text)
-  primaryMain: '#4CAF50',   // Green 500
-  primaryLight: '#81C784',  // Green 300
-  primaryDark: '#388E3C',   // Green 700
+  // MUI Material Green — used as interactive primary
+  primaryMain:  c.primary.main,
+  primaryLight: c.primary.light,
+  primaryDark:  c.primary.dark,
 
-  // Dark surfaces — graphite with a subtle green hint
-  dark: '#111412',
-  surface: '#181C19',
-  surface2: '#1F2420',
-  surface3: '#262C28',
+  // Dark surfaces
+  dark:     c.background.default,
+  surface:  c.background.paper,
+  surface2: c.background.surface2,
+  surface3: c.background.surface3,
 
-  border: '#343C39',
-  border2: '#424A47',
+  border:  c.border.subtle,
+  border2: c.border.default,
 
-  // Text — neutral grey, green toned way down vs original brand
-  text: '#EBEBEB',
-  text2: '#8A9490',
-  text3: '#5C6762',
+  // Text
+  text:  c.text.primary,
+  text2: c.text.secondary,
+  text3: c.text.disabled,
 
-  // Semantic extras
-  error: '#FF7070',
-  warning: '#FFB85A',
-  info: '#7AB8FF',
-  success: '#2CC76B',
+  // Semantic
+  error:   c.semantic.error,
+  warning: c.semantic.warning,
+  info:    c.semantic.info,
+  success: c.semantic.success,
 } as const
 
 export const palette: PaletteOptions = {
   mode: 'dark',
 
   primary: {
-    main: brand.primaryMain,
-    dark: brand.primaryDark,
-    light: brand.primaryLight,
-    contrastText: '#ffffff',
+    main:         brand.primaryMain,
+    dark:         brand.primaryDark,
+    light:        brand.primaryLight,
+    contrastText: c.primary.contrastText,
   },
 
   secondary: {
-    main: brand.lime,
+    main:         brand.lime,
     contrastText: brand.dark,
   },
 
-  error: {
-    main: brand.error,
-    contrastText: brand.text,
-  },
-
-  warning: {
-    main: brand.warning,
-    contrastText: brand.dark,
-  },
-
-  info: {
-    main: brand.info,
-    contrastText: brand.dark,
-  },
+  error:   { main: brand.error,   contrastText: brand.text },
+  warning: { main: brand.warning, contrastText: brand.dark },
+  info:    { main: brand.info,    contrastText: brand.dark },
 
   success: {
-    main: brand.success,
-    dark: brand.greenDeep,
+    main:         brand.success,
+    dark:         brand.greenDeep,
     contrastText: brand.dark,
   },
 
   background: {
     default: brand.dark,
-    paper: brand.surface,
+    paper:   brand.surface,
   },
 
   text: {
-    primary: brand.text,
+    primary:  brand.text,
     secondary: brand.text2,
     disabled: brand.text3,
   },
