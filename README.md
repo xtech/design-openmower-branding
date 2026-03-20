@@ -2,7 +2,7 @@
 
 Material UI v6 theme for the [OpenMower](https://github.com/ClemensElflein/OpenMower) open-source RTK GPS robotic lawn mower project.
 
-**Live demo →** `https://<your-org>.github.io/<this-repo>/`
+**Live demo →** [https://github.com/xtech/design-openmower-branding](https://github.com/xtech/design-openmower-branding)
 
 ---
 
