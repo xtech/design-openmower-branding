@@ -20,7 +20,7 @@ export function ChipsSection() {
 
       <DemoPanel>
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', mb: 3 }}>
-          <Chip label="Mowing" color="primary" icon={<StatusDot color={brand.green} />} />
+          <Chip label="Mowing" color="primary" icon={<StatusDot color={brand.primaryMain} />} />
           <Chip label="Electric Lime" color="secondary" />
           <Chip label="Error" color="error" />
           <Chip label="Warning" color="warning" />
@@ -37,11 +37,11 @@ export function ChipsSection() {
         {/* Custom semantic badges matching brand guide */}
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
           {[
-            { label: 'Active', bg: 'rgba(44,199,107,0.14)', color: brand.green },
+            { label: 'Active', bg: 'rgba(76,175,80,0.14)', color: brand.primaryMain },
             { label: 'Charging', bg: 'rgba(172,255,90,0.12)', color: brand.lime },
-            { label: 'GPS Lock', bg: 'rgba(122,184,255,0.1)', color: '#7AB8FF' },
-            { label: 'Warning', bg: 'rgba(255,184,90,0.1)', color: '#FFB85A' },
-            { label: 'Error', bg: 'rgba(255,112,112,0.1)', color: '#FF7070' },
+            { label: 'GPS Lock', bg: 'rgba(122,184,255,0.1)', color: brand.info },
+            { label: 'Warning', bg: 'rgba(255,184,90,0.1)', color: brand.warning },
+            { label: 'Error', bg: 'rgba(255,112,112,0.1)', color: brand.error },
             { label: 'Idle', bg: 'rgba(150,180,160,0.08)', color: brand.text3 },
           ].map(({ label, bg, color }) => (
             <Box

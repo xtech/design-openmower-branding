@@ -60,7 +60,7 @@ export function ButtonsSection() {
           <Button
             sx={{
               bgcolor: 'rgba(255,112,112,0.1)',
-              color: '#FF7070',
+              color: 'error.main',
               border: '1px solid rgba(255,112,112,0.2)',
               '&:hover': { bgcolor: 'rgba(255,112,112,0.15)' },
             }}

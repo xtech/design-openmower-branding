@@ -9,7 +9,6 @@ import BatteryChargingFullIcon from '@mui/icons-material/BatteryChargingFull'
 import GpsFixedIcon from '@mui/icons-material/GpsFixed'
 import ScheduleIcon from '@mui/icons-material/Schedule'
 import { SectionHeader } from '../components/SectionHeader'
-import { brand } from '../../theme'
 
 function CardIcon({ children }: { children: React.ReactNode }) {
   return (
@@ -18,11 +17,11 @@ function CardIcon({ children }: { children: React.ReactNode }) {
         width: 38,
         height: 38,
         borderRadius: '9px',
-        bgcolor: 'rgba(44,199,107,0.14)',
+        bgcolor: 'rgba(76,175,80,0.14)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: brand.green,
+        color: 'primary.main',
         flexShrink: 0,
       }}
     >

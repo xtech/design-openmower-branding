@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import { OpenMowerLogo } from '../../components/OpenMowerLogo'
-import { brand } from '../../theme'
 
 export function HeroSection() {
   return (
@@ -21,7 +20,7 @@ export function HeroSection() {
           transform: 'translateX(-50%)',
           width: 700,
           height: 400,
-          background: `radial-gradient(ellipse at 50% 100%, rgba(44,199,107,0.14) 0%, transparent 68%)`,
+          background: `radial-gradient(ellipse at 50% 100%, rgba(76,175,80,0.14) 0%, transparent 68%)`,
           pointerEvents: 'none',
         },
       }}
@@ -40,7 +39,7 @@ export function HeroSection() {
 
       <Typography variant="h1" sx={{ mb: 2, fontSize: 'clamp(1.9rem, 4vw, 3.2rem)', fontWeight: 700 }}>
         Smart.{' '}
-        <Box component="em" sx={{ fontStyle: 'normal', color: brand.green }}>
+        <Box component="em" sx={{ fontStyle: 'normal', color: 'primary.light' }}>
           Open.
         </Box>{' '}
         Autonomous.

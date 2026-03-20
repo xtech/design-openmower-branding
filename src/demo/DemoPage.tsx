@@ -58,6 +58,7 @@ export function DemoPage() {
             target="_blank"
             rel="noopener noreferrer"
             size="small"
+            sx={{ color: 'primary.main' }}
           >
             <GitHubIcon fontSize="small" />
           </IconButton>
