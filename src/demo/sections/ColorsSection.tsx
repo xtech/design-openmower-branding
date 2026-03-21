@@ -117,7 +117,7 @@ export function ColorsSection() {
           mb: 5,
         }}
       >
-        {primaryColors.map(({ name, hex, bg, infoBg, use }) => (
+        {primaryColors.map(({ name, hex, bg, use }) => (
           <Box
             key={name}
             sx={{ borderRadius: 3, overflow: 'hidden', border: '1px solid', borderColor: 'divider' }}
@@ -125,7 +125,7 @@ export function ColorsSection() {
             <Box sx={{ height: 130, bgcolor: bg, position: 'relative' }}>
               <Box sx={swatchHatch} />
             </Box>
-            <Box sx={{ p: '16px 18px', bgcolor: infoBg ?? brand.surface2 }}>
+            <Box sx={{ p: '16px 18px', bgcolor: brand.surface2 }}>
               <Typography sx={{ fontSize: '0.9375rem', fontWeight: 600, mb: 0.25 }}>
                 {name}
               </Typography>
