@@ -50,7 +50,7 @@ export function LogoSection() {
       <SectionHeader label="02 — Brand" title="Logo Usage" />
 
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: '1fr 1fr' }, gap: 2.5, mb: 4 }}>
-        <LogoCard bg={brand.dark} border={brand.border} label="On deep forest">
+        <LogoCard bg="#0C5E2B" label="On deep green" labelColor="rgba(255,255,255,0.45)">
           <Box sx={{ width: '100%', maxWidth: 340 }}>
             <OpenMowerLogo color="white" />
           </Box>
@@ -64,13 +64,13 @@ export function LogoSection() {
 
         <LogoCard bg={brand.surface3} border={brand.border2} label="On surface">
           <Box sx={{ width: '100%', maxWidth: 340 }}>
-            <OpenMowerLogo color="white" />
+            <OpenMowerLogo color="#1A1A1A" />
           </Box>
         </LogoCard>
 
-        <LogoCard bg="#ffffff" border="#e0ece5" label="On white" labelColor="#7A9E88">
+        <LogoCard bg="#ffffff" border={brand.border} label="On white" labelColor={brand.text3}>
           <Box sx={{ width: '100%', maxWidth: 340 }}>
-            <OpenMowerLogo color={brand.dark} />
+            <OpenMowerLogo color="#1A1A1A" />
           </Box>
         </LogoCard>
       </Box>
@@ -92,12 +92,24 @@ export function LogoSection() {
                 width: size,
                 height: size,
                 borderRadius: radius,
-                bgcolor: brand.green,
+                bgcolor: '#0C5E2B',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                position: 'relative',
+                overflow: 'hidden',
               }}
             >
+              <Box
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  opacity: 0.07,
+                  backgroundImage: 'repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%)',
+                  backgroundSize: '8px 8px',
+                  pointerEvents: 'none',
+                }}
+              />
               <OpenMowerIcon color="white" size={Math.round(size * 0.62)} />
             </Box>
             <Typography variant="caption" color="text.disabled" sx={{ fontFamily: '"DM Mono", monospace' }}>

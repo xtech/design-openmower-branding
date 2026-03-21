@@ -17,7 +17,7 @@ export const brand = {
   primaryLight: c.primary.light,
   primaryDark:  c.primary.dark,
 
-  // Dark surfaces
+  // Light surfaces
   dark:     c.background.default,
   surface:  c.background.paper,
   surface2: c.background.surface2,
@@ -39,7 +39,7 @@ export const brand = {
 } as const
 
 export const palette: PaletteOptions = {
-  mode: 'dark',
+  mode: 'light',
 
   primary: {
     main:         brand.primaryMain,
@@ -53,14 +53,14 @@ export const palette: PaletteOptions = {
     contrastText: c.secondary.contrastText,
   },
 
-  error:   { main: brand.error,   contrastText: brand.text },
-  warning: { main: brand.warning, contrastText: brand.dark },
-  info:    { main: brand.info,    contrastText: brand.dark },
+  error:   { main: brand.error,   contrastText: '#ffffff' },
+  warning: { main: brand.warning, contrastText: '#ffffff' },
+  info:    { main: brand.info,    contrastText: '#ffffff' },
 
   success: {
     main:         brand.success,
     dark:         brand.greenDeep,
-    contrastText: brand.dark,
+    contrastText: '#ffffff',
   },
 
   background: {

@@ -1,13 +1,13 @@
-import Paper from '@mui/material/Paper'
-import type { PaperProps } from '@mui/material/Paper'
+import Card from '@mui/material/Card'
+import type { CardProps } from '@mui/material/Card'
 
 /**
  * A consistently styled container for component demos.
  */
-export function DemoPanel({ sx, children, ...rest }: PaperProps) {
+export function DemoPanel({ sx, children, ...rest }: CardProps) {
   return (
-    <Paper sx={{ p: { xs: 3, sm: 4 }, ...sx }} {...rest}>
+    <Card sx={{ p: { xs: 3, sm: 4 }, ...sx }} {...rest}>
       {children}
-    </Paper>
+    </Card>
   )
 }

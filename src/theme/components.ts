@@ -11,7 +11,7 @@ export const components: Components<Theme> = {
         scrollBehavior: 'smooth',
       },
       ':root': {
-        colorScheme: 'dark',
+        colorScheme: 'light',
       },
       // Mono font utility class
       '.font-mono': {
@@ -68,7 +68,7 @@ export const components: Components<Theme> = {
         borderColor: brand.border2,
         color: brand.text2,
         '&:hover': {
-          backgroundColor: `rgba(235,235,235,0.04)`,
+          backgroundColor: `rgba(0,0,0,0.04)`,
           borderColor: brand.text3,
         },
       },
@@ -76,7 +76,7 @@ export const components: Components<Theme> = {
       textSecondary: {
         color: brand.text2,
         '&:hover': {
-          backgroundColor: `rgba(235,235,235,0.04)`,
+          backgroundColor: `rgba(0,0,0,0.04)`,
         },
       },
       // outlined — green border
@@ -156,9 +156,10 @@ export const components: Components<Theme> = {
     styleOverrides: {
       root: {
         backgroundImage: 'none',
-        backgroundColor: brand.surface2,
-        border: `1px solid ${brand.border}`,
+        backgroundColor: brand.surface,
+        border: 'none',
         borderRadius: 12,
+        boxShadow: '0 2px 6px rgba(0,0,0,0.09), 0 0 0 1px rgba(0,0,0,0.08)',
       },
     },
   },
@@ -181,10 +182,11 @@ export const components: Components<Theme> = {
       root: {
         backgroundImage: 'none',
         backgroundColor: brand.surface,
-        border: `1px solid ${brand.border}`,
+        border: 'none',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.09), 0 0 0 1px rgba(0,0,0,0.08)',
       },
       elevation0: {
-        border: 'none',
+        boxShadow: 'none',
       },
     },
   },

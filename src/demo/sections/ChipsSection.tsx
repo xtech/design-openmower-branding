@@ -4,14 +4,6 @@ import { SectionHeader } from '../components/SectionHeader'
 import { DemoPanel } from '../components/DemoPanel'
 import { brand } from '../../theme'
 
-function StatusDot({ color }: { color: string }) {
-  return (
-    <Box
-      component="span"
-      sx={{ width: 6, height: 6, borderRadius: '50%', bgcolor: color, display: 'inline-block' }}
-    />
-  )
-}
 
 export function ChipsSection() {
   return (
@@ -20,7 +12,7 @@ export function ChipsSection() {
 
       <DemoPanel>
         <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', mb: 3 }}>
-          <Chip label="Mowing" color="primary" icon={<StatusDot color={brand.primaryMain} />} />
+          <Chip label="Mowing" color="primary" />
           <Chip label="Secondary" color="secondary" />
           <Chip label="Error" color="error" />
           <Chip label="Warning" color="warning" />

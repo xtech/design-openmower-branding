@@ -4,6 +4,7 @@ import Divider from '@mui/material/Divider'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
+import Button from '@mui/material/Button'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import { OpenMowerLogo } from '../components/OpenMowerLogo'
 import { brand } from '../theme'
@@ -37,10 +38,38 @@ export function DemoPage() {
   return (
     <>
       {/* Top nav */}
-      <AppBar position="sticky">
-        <Toolbar>
-          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
-            <OpenMowerLogo style={{ height: 22, width: 'auto' }} />
+      <AppBar position="sticky" sx={{
+        backgroundColor: '#181C19',
+        borderBottom: '1px solid #343C39',
+        boxShadow: 'none',
+      }}>
+        <Toolbar sx={{ gap: 1 }}>
+          <Box sx={{ mr: 4, display: 'flex', alignItems: 'center' }}>
+            <OpenMowerLogo color="white" style={{ height: 28, width: 'auto' }} />
+          </Box>
+          <Box sx={{ display: 'flex', gap: 0.5, flexGrow: 1 }}>
+            {[
+              { label: 'Overview', active: true },
+              { label: 'Nav Item', active: false },
+              { label: 'Nav Item', active: false },
+              { label: 'Nav Item', active: false },
+            ].map((item, i) => (
+              <Button
+                key={i}
+                size="small"
+                sx={{
+                  color: item.active ? 'white' : '#9AABA5',
+                  fontWeight: item.active ? 500 : 400,
+                  fontSize: '0.9375rem',
+                  borderBottom: item.active ? '2px solid #2CC76B' : '2px solid transparent',
+                  borderRadius: 0,
+                  px: 1.5,
+                  '&:hover': { color: '#EBEBEB', bgcolor: 'rgba(255,255,255,0.05)' },
+                }}
+              >
+                {item.label}
+              </Button>
+            ))}
           </Box>
           <IconButton
             component="a"
@@ -48,17 +77,15 @@ export function DemoPage() {
             target="_blank"
             rel="noopener noreferrer"
             size="small"
-            sx={{ color: 'white' }}
+            sx={{ color: 'white', '&:hover': { color: 'white', opacity: 0.8 } }}
           >
             <GitHubIcon fontSize="small" />
           </IconButton>
         </Toolbar>
       </AppBar>
 
-      {/* Hero */}
-      <Container maxWidth="lg">
-        <HeroSection />
-      </Container>
+      {/* Hero — full bleed */}
+      <HeroSection />
 
       {/* Component sections */}
       {sections.map((section, i) => (

@@ -27,31 +27,30 @@ const primaryColors = [
     use: 'Accent color — code, charging status, callouts',
   },
   {
-    name: 'Graphite',
-    hex: brand.dark,
-    bg: brand.dark,
-    use: 'Primary background — app shell, dark mode surfaces',
-  },
-  {
     name: 'Pale Meadow',
     hex: '#E3F9EC',
     bg: brand.greenPale,
-    infoBg: brand.surface3,
-    use: 'Light mode background — documentation, print, light UIs',
+    use: 'Light mode accent — documentation, print, tinted surfaces',
+  },
+  {
+    name: 'Graphite',
+    hex: '#1A1A1A',
+    bg: '#1A1A1A',
+    use: 'Primary text — headings, labels, dark UI elements',
   },
 ]
 
-// Rebalanced: light end has less green, dark end has more green hint
+// Light neutral scale — from lightest surface to darkest text
 const neutralScale = [
-  '#EBEBEB',  // near-white, minimal green
-  '#C4CECA',  // light grey, hint of green
-  '#9AABA5',  // medium-light, subtle green
-  '#728480',  // medium
-  brand.text3, // #5C6762
-  brand.border, // #3A4240
-  brand.surface3, // #2C3330
-  brand.surface,  // #1E2320
-  brand.dark,     // #161A17 — darkest, slight green warmth
+  brand.surface,  // #FFFFFF — white paper
+  brand.dark,     // #F2F6F3 — default background
+  brand.surface2, // #EDF2EE — card surface
+  brand.surface3, // #E3EAE4 — elevated surface
+  brand.border,   // #CCDAD0 — subtle border
+  brand.border2,  // #AFC2B6 — default border
+  brand.text3,    // #7A9490 — disabled text
+  brand.text2,    // #4A6158 — secondary text
+  brand.text,     // #141F1A — primary text
 ]
 
 // Brand accent green (original #2CC76B) full ramp
@@ -66,12 +65,12 @@ const amberScale = [
   '#E08B0D', '#BC7209', '#935907', '#6B4005', '#402500',
 ]
 
-// Semantic colours
+// Semantic colours — dark = text/icon color, light = alert background tint
 const semanticColors = [
-  { name: 'Error',   hex: brand.error,   bg: brand.error },
-  { name: 'Warning', hex: brand.warning, bg: brand.warning },
-  { name: 'Info',    hex: brand.info,    bg: brand.info },
-  { name: 'Success', hex: brand.primaryMain, bg: brand.primaryMain },
+  { name: 'Error',   dark: brand.error,      light: '#FFE4DE' },
+  { name: 'Warning', dark: '#F5A523',         light: '#FFF0C2' },
+  { name: 'Info',    dark: brand.info,       light: '#D6EAFF' },
+  { name: 'Success', dark: brand.primaryMain, light: '#C8F5DC' },
 ]
 
 function ScaleRow({ label, colors }: { label: string; colors: string[] }) {
@@ -145,7 +144,7 @@ export function ColorsSection() {
       <ScaleRow label="Mow green scale — primary color ramp" colors={brandGreenScale} />
       <ScaleRow label="Amber scale — #F5A523 ramp" colors={amberScale} />
       <ScaleRow
-        label="Dark / Neutral scale — graphite with green hint increasing toward dark end"
+        label="Light / Neutral scale — warm white surfaces to dark text"
         colors={neutralScale}
       />
 
@@ -155,25 +154,29 @@ export function ColorsSection() {
           Semantic colours
         </Typography>
         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-          {semanticColors.map(({ name, hex, bg }) => (
+          {semanticColors.map(({ name, dark, light }) => (
             <Box key={name} sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
               <Box
                 sx={{
-                  width: 28,
+                  width: 36,
                   height: 28,
                   borderRadius: 1,
-                  bgcolor: bg,
-                  position: 'relative',
                   flexShrink: 0,
-                  border: '1px solid rgba(255,255,255,0.1)',
+                  border: '1px solid rgba(0,0,0,0.1)',
                   overflow: 'hidden',
+                  display: 'flex',
                 }}
               >
-                <Box sx={swatchHatch} />
+                <Box sx={{ flex: 1, bgcolor: dark, position: 'relative' }}>
+                  <Box sx={swatchHatch} />
+                </Box>
+                <Box sx={{ flex: 1, bgcolor: light, position: 'relative' }}>
+                  <Box sx={swatchHatch} />
+                </Box>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: '0.8125rem', fontWeight: 500, lineHeight: 1.2 }}>{name}</Typography>
-                <Typography sx={{ fontFamily: '"DM Mono", monospace', fontSize: '0.6875rem', color: 'text.disabled' }}>{hex}</Typography>
+                <Typography sx={{ fontFamily: '"DM Mono", monospace', fontSize: '0.6875rem', color: 'text.disabled' }}>{dark}</Typography>
               </Box>
             </Box>
           ))}
