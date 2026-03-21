@@ -1,7 +1,7 @@
 import type { TypographyOptions } from '@mui/material/styles/createTypography'
 
 export const typography: TypographyOptions = {
-  fontFamily: '"DM Sans", sans-serif',
+  fontFamily: '"DM Sans Variable", "DM Sans", sans-serif',
 
   fontWeightLight: 300,
   fontWeightRegular: 400,

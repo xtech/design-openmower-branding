@@ -8,9 +8,9 @@
     "Always use DM Sans for UI text and DM Mono for code/monospace."
   ],
   "name": "OpenMower",
-  "description": "Dark-mode design system for the OpenMower open-source RTK GPS robotic lawn mower project.",
-  "version": "1.0.0",
-  "mode": "dark",
+  "description": "Light-mode design system for the OpenMower open-source RTK GPS robotic lawn mower project.",
+  "version": "1.1.0",
+  "mode": "light",
   "colors": {
     "accent": {
       "green": "#2CC76B",
@@ -21,9 +21,9 @@
       "usage": "Brand accent — tab indicators, section labels, decorative highlights"
     },
     "primary": {
-      "main": "#2CC76B",
-      "light": "#5FD494",
-      "dark": "#1EA856",
+      "main": "#1B9D52",
+      "light": "#2CC76B",
+      "dark": "#14853F",
       "contrastText": "#ffffff",
       "usage": "Interactive primary — buttons, links, focus rings, active states"
     },
@@ -33,34 +33,33 @@
       "usage": "Secondary actions — darker mow green, visually subordinate to primary"
     },
     "background": {
-      "default": "#0E100E",
-      "paper": "#181C19",
-      "surface2": "#1F2420",
-      "surface3": "#262C28",
-      "usage": "Layered dark surfaces — default → paper → card → elevated card"
+      "default": "#FFFFFF",
+      "paper": "#FFFFFF",
+      "surface2": "#EFEFEF",
+      "surface3": "#E5E5E5",
+      "usage": "Layered light surfaces — default → paper → card → elevated card"
     },
     "border": {
-      "subtle": "#343C39",
-      "default": "#424A47",
+      "subtle": "#E0E0E0",
+      "default": "#CACACA",
       "usage": "Dividers, card borders, input outlines"
     },
     "text": {
-      "primary": "#EBEBEB",
-      "secondary": "#8A9490",
-      "disabled": "#5C6762",
-      "usage": "Neutral grey hierarchy — primary for headings, secondary for body, disabled for metadata"
+      "primary": "#1A1A1A",
+      "secondary": "#555555",
+      "disabled": "#9E9E9E",
+      "usage": "Graphite text hierarchy — primary for headings, secondary for body, disabled for metadata"
     },
     "semantic": {
-      "error": "#FF6040",
-      "warning": "#FCC762",
-      "info": "#7AB8FF",
-      "success": "#2CC76B"
+      "error": "#C93020",
+      "warning": "#F5A523",
+      "info": "#1565C0",
+      "success": "#1B9D52"
     }
   },
   "typography": {
-    "fontFamily": "DM Sans",
+    "fontFamily": "DM Sans Variable",
     "monoFamily": "DM Mono",
-    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap",
     "weights": {
       "light": 300,
       "regular": 400,
@@ -177,8 +176,8 @@
       "secondary": "rgba(245,165,35,0.12) bg, #F5A523 text"
     },
     "card": {
-      "background": "surface2 (#1F2420)",
-      "border": "1px solid border (#343C39)",
+      "background": "surface2 (#EFEFEF)",
+      "border": "1px solid border (#E0E0E0)",
       "borderRadius": "12px",
       "padding": "20px 22px"
     },
@@ -195,47 +194,46 @@
   },
   "themeFactory": {
     "_note": "Use this section with the anthropic-skills:theme-factory skill",
-    "name": "OpenMower Dark",
-    "mode": "dark",
-    "primaryColor": "#2CC76B",
-    "primaryColorLight": "#5FD494",
-    "primaryColorDark": "#1EA856",
+    "name": "OpenMower Light",
+    "mode": "light",
+    "primaryColor": "#1B9D52",
+    "primaryColorLight": "#2CC76B",
+    "primaryColorDark": "#14853F",
     "accentColor": "#2CC76B",
     "secondaryColor": "#F5A523",
-    "backgroundColor": "#0E100E",
-    "surfaceColor": "#181C19",
-    "textColor": "#EBEBEB",
-    "textSecondaryColor": "#8A9490",
-    "errorColor": "#FF6040",
-    "warningColor": "#FCC762",
-    "infoColor": "#7AB8FF",
-    "successColor": "#4CAF50",
-    "headingFont": "DM Sans",
-    "bodyFont": "DM Sans",
+    "backgroundColor": "#FFFFFF",
+    "surfaceColor": "#FFFFFF",
+    "textColor": "#1A1A1A",
+    "textSecondaryColor": "#555555",
+    "errorColor": "#C93020",
+    "warningColor": "#F5A523",
+    "infoColor": "#1565C0",
+    "successColor": "#1B9D52",
+    "headingFont": "DM Sans Variable",
+    "bodyFont": "DM Sans Variable",
     "monoFont": "DM Mono",
-    "borderRadius": "12px",
-    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+    "borderRadius": "12px"
   },
   "cssVariables": {
-    "--color-primary": "#2CC76B",
-    "--color-primary-light": "#5FD494",
-    "--color-primary-dark": "#1EA856",
+    "--color-primary": "#1B9D52",
+    "--color-primary-light": "#2CC76B",
+    "--color-primary-dark": "#14853F",
     "--color-accent": "#2CC76B",
     "--color-amber": "#F5A523",
-    "--color-bg": "#0E100E",
-    "--color-surface": "#181C19",
-    "--color-surface-2": "#1F2420",
-    "--color-surface-3": "#262C28",
-    "--color-border": "#343C39",
-    "--color-border-2": "#424A47",
-    "--color-text": "#EBEBEB",
-    "--color-text-secondary": "#8A9490",
-    "--color-text-disabled": "#5C6762",
-    "--color-error": "#FF6040",
-    "--color-warning": "#FCC762",
-    "--color-info": "#7AB8FF",
-    "--color-success": "#2CC76B",
-    "--font-sans": "\"DM Sans\", sans-serif",
+    "--color-bg": "#FFFFFF",
+    "--color-surface": "#FFFFFF",
+    "--color-surface-2": "#EFEFEF",
+    "--color-surface-3": "#E5E5E5",
+    "--color-border": "#E0E0E0",
+    "--color-border-2": "#CACACA",
+    "--color-text": "#1A1A1A",
+    "--color-text-secondary": "#555555",
+    "--color-text-disabled": "#9E9E9E",
+    "--color-error": "#C93020",
+    "--color-warning": "#F5A523",
+    "--color-info": "#1565C0",
+    "--color-success": "#1B9D52",
+    "--font-sans": "\"DM Sans Variable\", sans-serif",
     "--font-mono": "\"DM Mono\", monospace",
     "--radius": "12px"
   },
@@ -243,26 +241,26 @@
     "_note": "Paste into tailwind.config.js → theme.extend",
     "colors": {
       "primary": {
-        "DEFAULT": "#2CC76B",
-        "light": "#5FD494",
-        "dark": "#1EA856"
+        "DEFAULT": "#1B9D52",
+        "light": "#2CC76B",
+        "dark": "#14853F"
       },
       "accent": "#2CC76B",
       "amber": "#F5A523",
-      "bg": "#0E100E",
-      "surface": "#181C19",
-      "surface-2": "#1F2420",
-      "surface-3": "#262C28",
-      "border": "#343C39",
-      "border-2": "#424A47",
-      "error": "#FF6040",
-      "warning": "#FCC762",
-      "info": "#7AB8FF",
-      "success": "#2CC76B"
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "surface-2": "#EFEFEF",
+      "surface-3": "#E5E5E5",
+      "border": "#E0E0E0",
+      "border-2": "#CACACA",
+      "error": "#C93020",
+      "warning": "#F5A523",
+      "info": "#1565C0",
+      "success": "#1B9D52"
     },
     "fontFamily": {
       "sans": [
-        "\"DM Sans\"",
+        "\"DM Sans Variable\"",
         "sans-serif"
       ],
       "mono": [
